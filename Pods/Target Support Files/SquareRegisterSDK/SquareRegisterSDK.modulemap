@@ -1,0 +1,6 @@
+framework module SquareRegisterSDK {
+  umbrella header "SquareRegisterSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
