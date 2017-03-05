@@ -15,6 +15,7 @@
 		4DFFDE9C1E6B02A40038FA98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFFDE9A1E6B02A40038FA98 /* LaunchScreen.storyboard */; };
 		4DFFDEA81E6B12450038FA98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DFFDEA71E6B12450038FA98 /* GoogleService-Info.plist */; };
 		4DFFDEAB1E6B60B40038FA98 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFDEAA1E6B60B40038FA98 /* LaunchViewController.swift */; };
+		4DFFDEAD1E6C13540038FA98 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFDEAC1E6C13540038FA98 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4DFFDEA71E6B12450038FA98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DFFDEA91E6B14810038FA98 /* W8R.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = W8R.entitlements; sourceTree = "<group>"; };
 		4DFFDEAA1E6B60B40038FA98 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		4DFFDEAC1E6C13540038FA98 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		68EAA938434E27458BCD60B6 /* Pods-W8R.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W8R.release.xcconfig"; path = "Pods/Target Support Files/Pods-W8R/Pods-W8R.release.xcconfig"; sourceTree = "<group>"; };
 		7786DEA98A1DB6223E2F964E /* Pods-W8R.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-W8R.debug.xcconfig"; path = "Pods/Target Support Files/Pods-W8R/Pods-W8R.debug.xcconfig"; sourceTree = "<group>"; };
 		915A6B8288EA11B40923B956 /* Pods_W8R.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_W8R.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 				4DFFDE911E6B02A40038FA98 /* AppDelegate.swift */,
 				4DFFDEAA1E6B60B40038FA98 /* LaunchViewController.swift */,
 				4DFFDE931E6B02A40038FA98 /* PaymentViewController.swift */,
+				4DFFDEAC1E6C13540038FA98 /* ResultViewController.swift */,
 				4DFFDE951E6B02A40038FA98 /* Main.storyboard */,
 				4DFFDE9A1E6B02A40038FA98 /* LaunchScreen.storyboard */,
 				4DFFDE981E6B02A40038FA98 /* Assets.xcassets */,
@@ -229,6 +232,7 @@
 				4DFFDE941E6B02A40038FA98 /* PaymentViewController.swift in Sources */,
 				4DFFDEAB1E6B60B40038FA98 /* LaunchViewController.swift in Sources */,
 				4DFFDE921E6B02A40038FA98 /* AppDelegate.swift in Sources */,
+				4DFFDEAD1E6C13540038FA98 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

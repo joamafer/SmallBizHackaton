@@ -30,7 +30,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W8R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3e-A5-ahr">
                                         <rect key="frame" x="72" y="225.5" width="231.5" height="116.5"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="100"/>
-                                        <color key="textColor" red="1" green="0.82506874194355628" blue="0.26752345536426247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="0.91764705882352937" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="2" height="-1"/>
@@ -80,6 +80,97 @@
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="94.902548725637189"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="t6e-1P-bHz">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="ylp-q1-AJi" customClass="ResultViewController" customModule="W8R" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="992-Dq-xkf"/>
+                        <viewControllerLayoutGuide type="bottom" id="dnW-nY-s7E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LVp-0l-Ylo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hcz-20-9fj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMT-az-4NF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZD-P1-Cxa">
+                                        <rect key="frame" x="147.5" y="259" width="80" height="33"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Table 1">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="24" name="AvenirNext-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhy-Vh-LbF">
+                                        <rect key="frame" x="63" y="300" width="249.5" height="67"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Completed">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.91764705882352937" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="48" name="AvenirNext-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N86-XO-frB">
+                                        <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="36"/>
+                                        <state key="normal" title="Continue">
+                                            <color key="titleColor" red="1" green="0.91764705879999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pay:" destination="Cip-6P-pNo" eventType="touchUpInside" id="TbL-fR-0Kg"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="hPb-QR-gBX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.26548745600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="N86-XO-frB" firstAttribute="leading" secondItem="WMT-az-4NF" secondAttribute="leading" id="CZN-Xf-zDd"/>
+                                    <constraint firstItem="Rhy-Vh-LbF" firstAttribute="centerX" secondItem="WMT-az-4NF" secondAttribute="centerX" id="LOC-QO-ph6"/>
+                                    <constraint firstItem="Rhy-Vh-LbF" firstAttribute="centerY" secondItem="WMT-az-4NF" secondAttribute="centerY" id="RsJ-Mz-CFq"/>
+                                    <constraint firstItem="Rhy-Vh-LbF" firstAttribute="top" secondItem="XZD-P1-Cxa" secondAttribute="bottom" constant="8" id="TJ0-ht-ksz"/>
+                                    <constraint firstAttribute="bottom" secondItem="N86-XO-frB" secondAttribute="bottom" id="htF-DI-Mj5"/>
+                                    <constraint firstItem="XZD-P1-Cxa" firstAttribute="centerX" secondItem="Rhy-Vh-LbF" secondAttribute="centerX" id="l8I-Ld-szz"/>
+                                    <constraint firstAttribute="trailing" secondItem="N86-XO-frB" secondAttribute="trailing" id="sVu-z2-Xm8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hcz-20-9fj" firstAttribute="top" secondItem="LVp-0l-Ylo" secondAttribute="top" id="00Y-sL-1md"/>
+                            <constraint firstItem="hcz-20-9fj" firstAttribute="leading" secondItem="LVp-0l-Ylo" secondAttribute="leading" id="4wh-GY-G4z"/>
+                            <constraint firstItem="WMT-az-4NF" firstAttribute="top" secondItem="LVp-0l-Ylo" secondAttribute="top" id="ArM-na-Uxh"/>
+                            <constraint firstItem="dnW-nY-s7E" firstAttribute="top" secondItem="hcz-20-9fj" secondAttribute="bottom" id="O1A-3I-19J"/>
+                            <constraint firstAttribute="trailing" secondItem="hcz-20-9fj" secondAttribute="trailing" id="fxS-BZ-zp3"/>
+                            <constraint firstItem="WMT-az-4NF" firstAttribute="leading" secondItem="LVp-0l-Ylo" secondAttribute="leading" id="lL0-SQ-Rit"/>
+                            <constraint firstAttribute="trailing" secondItem="WMT-az-4NF" secondAttribute="trailing" id="n0h-Cr-uzu"/>
+                            <constraint firstItem="dnW-nY-s7E" firstAttribute="top" secondItem="WMT-az-4NF" secondAttribute="bottom" id="vvt-wf-DP5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="Rhy-Vh-LbF" id="FcW-AN-Vav"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vVm-zc-XZo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="95"/>
+        </scene>
         <!--Payment View Controller-->
         <scene sceneID="Rjs-ii-seb">
             <objects>
@@ -103,7 +194,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="36"/>
                                         <state key="normal" title="Continue">
-                                            <color key="titleColor" red="1" green="0.82471364739999997" blue="0.26668706539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="1" green="0.91764705882352937" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -121,9 +212,23 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-Df-jKN">
-                                <rect key="frame" x="20" y="234" width="335" height="66"/>
+                                <rect key="frame" x="20" y="215.5" width="335" height="66"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Customers from table 1 are going to pay">
+                                    <fragment content="Customers from ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="table 1">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99944907426834106" green="0.91780519485473633" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" are going to pay">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="24" name="AvenirNext-Medium"/>
@@ -134,12 +239,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPe-2U-iyg">
-                                <rect key="frame" x="129" y="308" width="117" height="51"/>
+                                <rect key="frame" x="84" y="289.5" width="207.5" height="88.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="£35.00">
                                         <attributes>
-                                            <color key="NSColor" red="1" green="0.82471364736557007" blue="0.2666870653629303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="36" name="AvenirNext-Medium"/>
+                                            <color key="NSColor" red="1" green="0.91764705882352937" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="64" name="AvenirNext-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>

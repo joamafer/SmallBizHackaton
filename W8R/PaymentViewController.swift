@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import FirebaseInstanceID
 import FirebaseMessaging
 import SquareRegisterSDK
@@ -24,7 +25,7 @@ class PaymentViewController: UIViewController {
         super.viewDidLoad()
         
         if let price = price {
-            self.priceLabel.text = "£\(CGFloat(price)/100.0)"
+            self.priceLabel.text = String(format: "£%.2f", CGFloat(price)/100.0)
         }
     }
     

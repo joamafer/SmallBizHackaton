@@ -40,13 +40,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
     }
     
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        if let aps = userInfo["aps"] as? [String: Any],
+            let alert = aps["alert"] as? [String: Any],
+            let body = alert["body"] as? String,
+            let paymentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PaymentViewController.self)) as? PaymentViewController,
+            let rootVC = window?.rootViewController {
+            
+            paymentViewController.price = Int(body)
+            paymentViewController.modalTransitionStyle = .crossDissolve
+            
+            rootVC.present(paymentViewController, animated: true, completion: nil)
+        }
+    }
+    
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication]
-        if (sourceApplication as! String).hasPrefix("com.squareup.square") {
-            let response = try! SCCAPIResponse(responseURL: url)
-            print(response)
+        if (sourceApplication as! String).hasPrefix("com.squareup.square"),
+            let resultViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: ResultViewController.self)) as? ResultViewController,
+            let rootVC = window?.rootViewController?.presentedViewController {
             
-            return true
+            do {
+                let response = try SCCAPIResponse(responseURL: url)
+            
+                resultViewController.resultText = response.isSuccessResponse ? "Completed" : "Failed"
+                resultViewController.modalTransitionStyle = .crossDissolve
+                rootVC.present(resultViewController, animated: false, completion: nil)
+            
+                return true
+            } catch {
+                print("Callback error")
+            }
         }
         
         return false
@@ -84,4 +109,3 @@ extension AppDelegate: FIRMessagingDelegate {
     }
     
 }
-
